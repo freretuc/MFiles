@@ -1,0 +1,20 @@
+Public VaultClasses As New Dictionary(Of Integer, String)
+Public VaultProperties As New Dictionary(Of Integer, String)
+
+Public Sub getVaultClasses()
+
+    VaultClasses.Clear()
+    For Each MFObject As MFilesAPI.ObjectClass In MFVault.ClassOperations.GetAllObjectClasses
+        VaultClasses.Add(MFObject.ID, MFObject.Name)
+    Next
+
+End Sub
+
+Public Sub getVaultProperties()
+
+    VaultProperties.Clear()
+    For Each MFObject As MFilesAPI.VaultObjectPropertyOperations In MFVault.PropertyDefOperations.GetPropertyDefs()
+        '    VaultProperties.Add(MFObject., MFObject.Name)
+    Next
+
+End Sub
