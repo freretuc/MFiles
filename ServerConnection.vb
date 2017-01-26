@@ -2,9 +2,6 @@ Public MFClient As New MFilesAPI.MFilesClientApplication
 Public MFServer As New MFilesAPI.MFilesServerApplication
 Public MFVault As New MFilesAPI.Vault
 
-Public VaultClasses As New Dictionary(Of Integer, String)
-Public VaultProperties As New Dictionary(Of Integer, String)
-
 Public Function MFGetVaults() As MFilesAPI.VaultsOnServer
 
     MFConnect()
